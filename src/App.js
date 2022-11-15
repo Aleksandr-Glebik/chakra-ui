@@ -7,10 +7,11 @@ import {
   VStack,
   Code,
   Grid,
-  theme,
+  // theme,
   Container,
   Heading,
-  Divider
+  Divider,
+  extendTheme
 } from '@chakra-ui/react';
 
 import { Logo } from './Logo';
@@ -48,6 +49,33 @@ const posts = [
     title: "dolorem eum magni eos aperiam quia",
     body: "ut aspernatur corporis harum nihil quis provident sequi mollitia nobis aliquid molestiae perspiciatis et ea nemo ab reprehenderit accusantium quas voluptate dolores velit et doloremque molestiae"
   }]
+
+  const theme = extendTheme({
+    colors: {
+      brand: {
+        100: 'red',
+        200: 'red',
+        300: 'red',
+        400: 'red',
+        500: 'brown',
+        600: 'brown',
+        700: 'brown'
+      }
+    },
+    components: {
+      Button: {
+        variants: {
+          brand: props => ({
+            bg: props.colorMode === 'dark' ? 'brand.300' : 'brand.700',
+            color: 'white',
+            _hover: {
+              bg: props.colorMode === 'dark' ? 'brand.700' : 'brand.300',
+            }
+          })
+        }
+      }
+    }
+  })
 
 function App() {
   return (
