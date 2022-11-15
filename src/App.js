@@ -15,6 +15,39 @@ import {
 
 import { Logo } from './Logo';
 import Header from './components/Header';
+import CardList from './components/CardList';
+
+const posts = [
+  {
+    userId: 1,
+    id: 2,
+    title: "qui est esse",
+    body: "est rerum tempore vitaesequi sint nihil reprehenderit dolor beatae ea dolores nequefugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis  qui aperiam non debitis possimus qui neque nisi nulla"
+  },
+  {
+    userId: 1,
+    id: 3,
+    title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+    body: "et iusto sed quo iure voluptatem occaecati omnis eligendi aut ad voluptatem doloribus vel accusantium quis pariatur molestiae porro eius odio et labore et velit aut"
+  },
+  {
+    userId: 1,
+    id: 4,
+    title: "eum et est occaecati",
+    body: "ullam et saepe reiciendis voluptatem adipisci sit amet autem assumenda provident rerum culpa quis hic commodi nesciunt rem tenetur doloremque ipsam iure quis sunt voluptatem rerum illo velit"
+  },
+  {
+    userId: 1,
+    id: 5,
+    title: "nesciunt quas odio",
+    body: "repudiandae veniam quaerat sunt sed alias aut fugiat sit autem sed est voluptatem omnis possimus esse voluptatibus quis est aut tenetur dolor neque"
+  },
+  {
+    userId: 1,
+    id: 6,
+    title: "dolorem eum magni eos aperiam quia",
+    body: "ut aspernatur corporis harum nihil quis provident sequi mollitia nobis aliquid molestiae perspiciatis et ea nemo ab reprehenderit accusantium quas voluptate dolores velit et doloremque molestiae"
+  }]
 
 function App() {
   return (
@@ -28,6 +61,7 @@ function App() {
           <Text fontSize={'xl'}>Hello from Chakra UI Components</Text>
         </Box>
         <Divider />
+        <CardList cards={posts}/>
       </Container>
       <Box textAlign="center" fontSize="xl">
         <Grid minH="100vh" p={3}>
